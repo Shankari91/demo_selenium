@@ -21,6 +21,14 @@ public class HomePage {
         clickLink("Hovers");
         return new HoversPage(driver);
     }
+    public KepPressesPage clickKeyPresses(){
+        clickLink("Key Presses");
+        return new KepPressesPage(driver);
+    }
+    public AlertsPage clickJavascriptAlert(){
+        clickLink("JavaScript Alerts");
+        return new AlertsPage(driver);
+    }
     public void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
