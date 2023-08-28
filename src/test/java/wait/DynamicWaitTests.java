@@ -12,4 +12,10 @@ public class DynamicWaitTests extends BaseTests {
         waitPage.clickStartButton();
         assertEquals(waitPage.getLoadedText(), "Hello World!", "Incorrect loaded Text");
     }
+    @Test
+    public void testFluentWait(){
+        var waitPage = homePage.clickDynamicLoadingPage().clickExample1();
+        waitPage.clickStartButtonAndUseFluentWait();
+        assertEquals(waitPage.getLoadedText(), "Hello World!", "Incorrect loaded Text");
+    }
 }
